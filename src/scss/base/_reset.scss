@@ -1,0 +1,37 @@
+@use "../abstracts/" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: $main-bg-color;
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $main-font-family;
+  color: $black-standard-color;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

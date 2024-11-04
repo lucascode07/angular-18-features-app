@@ -1,0 +1,95 @@
+@use "../../../../scss/abstracts/" as *;
+
+aside {
+  height: 100%;
+  border-right: 2px solid $gray-light-color;
+  padding: 16px 32px 22px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-bottom: 32px;
+
+    img {
+      height: 26px;
+      margin-right: 12px;
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+  }
+
+  .main-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $gray-standard-color;
+    margin-bottom: 44px;
+
+    i {
+      font-size: 1.5rem;
+      margin-right: 2px;
+    }
+
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 46px;
+
+    span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $green-special-color;
+      margin-right: 8px;
+      margin-bottom: 2px;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+
+      li {
+        height: 42px;
+
+        a {
+          border-radius: 8px;
+
+          color: $black-standard-color;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          height: 100%;
+          column-gap: 12px;
+          padding: 12px;
+          font-size: 0.875rem;
+          font-weight: 600;
+          transition: background-color 0.2s ease-in-out;
+
+          i {
+            font-size: 1.25rem;
+          }
+
+          &:hover,
+          &.active {
+            background-color: $secondary-bg-color;
+          }
+        }
+      }
+    }
+  }
+}

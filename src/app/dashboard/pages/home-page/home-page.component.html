@@ -1,0 +1,34 @@
+<section class="main-container">
+  <img
+    class="main-image"
+    src="/assets/images/angular-logo-bigger.webp"
+    alt="Logo de Angular"
+  />
+
+  <h2 class="docs-title">Introducción</h2>
+
+  <p class="docs-text">
+    Este es un proyecto que ha sido elaborado a manera de documentación, donde
+    podrás encontrar las nuevas características que trae Angular en su versión
+    18. En esta documentación, podrás encontrar tutoriales y ejemplos de uso
+    para cada novedad y todas tendrán el respaldo de la documentación oficial de
+    Angular.
+  </p>
+
+  <!-- TODO: Buscar estilo para los elementos que muestren código -->
+  <pre>¡ Te deseo la mejor experiencia aprendiendo Angular 18 !</pre>
+
+  <div class="info-cards-grid">
+    @for (card of infoCards(); track $index) {
+      @if (!card.url?.includes('https')) {
+        <a [routerLink]="card.url">
+          <info-card [cardInfo]="card" />
+        </a>
+      } @else {
+        <a [href]="card.url" target="_blank">
+          <info-card [cardInfo]="card" />
+        </a>
+      }
+    }
+  </div>
+</section>

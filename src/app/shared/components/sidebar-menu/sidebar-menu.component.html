@@ -1,0 +1,29 @@
+<aside>
+  <div class="logo">
+    <img src="/assets/images/angular-logo.svg" alt="app logo" />
+    <p>Angular 18</p>
+  </div>
+
+  <a class="main-link" routerLink="/">
+    <i class="bx bx-chevron-left"></i>
+    <span>Inicio</span>
+  </a>
+
+  <h2 class="subtitle">
+    <span class="dot"></span>
+    Características
+  </h2>
+
+  <nav>
+    <ul>
+      @for (link of linksList(); track link.slug) {
+        <li>
+          <a [routerLink]="link.slug" routerLinkActive="active">
+            <i [class]="link.icon"></i>
+            {{ link.label }}
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+</aside>

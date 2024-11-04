@@ -1,0 +1,57 @@
+@use "../../../../scss/abstracts/" as *;
+
+.info-card {
+  background-color: $white-color;
+  max-width: 300px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 12px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+
+    h3 {
+      color: $black-standard-color;
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+
+    .icon {
+      background-color: $black-standard-color;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: $white-color;
+      width: 32px;
+      height: 32px;
+      font-size: 1.125rem;
+      transition: all 0.25s ease-in-out;
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: -0.3px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $black-standard-color;
+    transition: all 0.25s ease-in-out;
+
+    header {
+      h3 {
+        color: $white-color;
+      }
+      .icon {
+        background-color: $green-special-color;
+        color: $black-standard-color;
+      }
+    }
+  }
+}

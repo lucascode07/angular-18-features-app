@@ -1,0 +1,12 @@
+@use "../../../../scss/abstracts/" as *;
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 287px 1fr;
+  height: 100dvh;
+  padding: 22px 0;
+
+  .page-content {
+    padding: 16px 40px 0;
+  }
+}
