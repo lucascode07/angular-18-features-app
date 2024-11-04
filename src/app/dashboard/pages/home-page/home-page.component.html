@@ -20,7 +20,7 @@
 
   <div class="info-cards-grid">
     @for (card of infoCards(); track $index) {
-      @if (!card.url?.includes('https')) {
+      @if (!card.url?.includes("https")) {
         <a [routerLink]="card.url">
           <info-card [cardInfo]="card" />
         </a>
