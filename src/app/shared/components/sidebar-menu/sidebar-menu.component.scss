@@ -1,9 +1,14 @@
 @use "../../../../scss/abstracts/" as *;
 
 aside {
-  height: 100%;
+  height: calc(100% - 44px);
+  width: 287px;
   border-right: 2px solid $gray-light-color;
   padding: 16px 32px 22px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  overflow-y: overlay;
 
   .logo {
     display: flex;
@@ -13,7 +18,8 @@ aside {
     margin-bottom: 32px;
 
     img {
-      height: 26px;
+      width: 25px;
+      height: 26.45px;
       margin-right: 12px;
     }
 
@@ -24,21 +30,29 @@ aside {
   }
 
   .main-link {
+    border-radius: 8px;
+    color: $gray-standard-color;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: $gray-standard-color;
-    margin-bottom: 44px;
+    margin-bottom: 32px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    height: 42px;
+    padding: 12px;
+    column-gap: 12px;
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
 
     i {
-      font-size: 1.5rem;
-      margin-right: 2px;
+      font-size: 1.25rem;
     }
 
-    &:hover {
-      span {
-        text-decoration: underline;
-      }
+    &:hover,
+    &.active {
+      background-color: $secondary-bg-color;
+      color: $black-standard-color;
     }
   }
 
@@ -58,18 +72,19 @@ aside {
   }
 
   nav {
+    margin-bottom: 1rem;
+
     ul {
       display: flex;
       flex-direction: column;
-      row-gap: 4px;
+      row-gap: 8px;
 
       li {
         height: 42px;
 
         a {
           border-radius: 8px;
-
-          color: $black-standard-color;
+          color: $gray-standard-color;
           display: flex;
           align-items: center;
           justify-content: flex-start;
@@ -78,7 +93,9 @@ aside {
           padding: 12px;
           font-size: 0.875rem;
           font-weight: 600;
-          transition: background-color 0.2s ease-in-out;
+          transition:
+            background-color 0.2s ease-in-out,
+            color 0.2s ease-in-out;
 
           i {
             font-size: 1.25rem;
@@ -87,7 +104,37 @@ aside {
           &:hover,
           &.active {
             background-color: $secondary-bg-color;
+            color: $black-standard-color;
           }
+        }
+      }
+    }
+  }
+
+  .creator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 16px;
+    margin-top: auto;
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+
+    .info {
+      font-weight: 700;
+
+      p {
+        display: flex;
+        align-items: center;
+        column-gap: 2px;
+        margin-top: 4px;
+
+        small {
+          font-weight: 300;
         }
       }
     }

@@ -9,9 +9,13 @@ section {
   }
 
   pre {
+    background-color: $black-standard-color;
+    border-radius: 8px;
+    padding: 18px;
+    color: $white-color;
     width: fit-content;
-    margin: 3rem auto;
-    font-size: 1rem;
+    margin: 2rem auto;
+    font-size: 16px;
   }
 
   .info-cards-grid {

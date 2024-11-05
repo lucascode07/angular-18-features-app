@@ -10,9 +10,6 @@ import { SIDEBAR_LINKS } from '@shared/utils/constants/sidebar-links.constants';
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './sidebar-menu.component.html',
   styleUrl: './sidebar-menu.component.scss',
-  host: {
-    class: 'sidebar-menu',
-  },
 })
 export class SidebarMenuComponent {
   public linksList = signal<SidebarLink[]>(SIDEBAR_LINKS);

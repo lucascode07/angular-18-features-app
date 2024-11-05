@@ -4,6 +4,8 @@
   display: grid;
   grid-template-columns: 287px 1fr;
   height: 100dvh;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 22px 0;
 
   .page-content {

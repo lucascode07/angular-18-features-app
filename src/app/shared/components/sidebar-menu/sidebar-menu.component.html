@@ -4,8 +4,13 @@
     <p>Angular 18</p>
   </div>
 
-  <a class="main-link" routerLink="/">
-    <i class="bx bx-chevron-left"></i>
+  <a
+    class="main-link"
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <i class="bx bx-home-alt"></i>
     <span>Inicio</span>
   </a>
 
@@ -26,4 +31,15 @@
       }
     </ul>
   </nav>
+
+  <div class="creator">
+    <img src="/assets/images/lucas-barrenechea.webp" alt="lucas-barrenechea" />
+    <div class="info">
+      Lucas Barrenechea
+      <p>
+        <i class="bx bxl-linkedin-square"></i>
+        <small>lucas-barrenechea</small>
+      </p>
+    </div>
+  </div>
 </aside>

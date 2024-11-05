@@ -28,6 +28,11 @@ textarea {
   font-style: normal;
 }
 
+pre,
+code {
+  font-family: $monospace-font-family;
+}
+
 a {
   text-decoration: none;
 }

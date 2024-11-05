@@ -1,4 +1,4 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { InfoCardComponent } from '../../components/info-card/info-card.component';
 import { InfoCard } from '../../interfaces/info-card.interface';
