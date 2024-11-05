@@ -1,0 +1,40 @@
+@use "../../../../scss/abstracts/" as *;
+
+.info-block {
+  background-color: $gray-lighter-color;
+  border-radius: 8px;
+
+  padding: 24px 24px 24px 42px;
+  font-weight: 500;
+  line-height: 1.6;
+  position: relative;
+
+  &.warning {
+    border: 1px solid $yellow-standard-color;
+
+    i {
+      color: $yellow-standard-color;
+    }
+  }
+
+  &.informative {
+    border: 1px solid $green-standard-color;
+
+    i {
+      color: $green-standard-color;
+    }
+  }
+
+  i {
+    position: absolute;
+    left: 16px;
+    top: 26px;
+    font-size: 1.125rem;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
