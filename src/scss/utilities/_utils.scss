@@ -15,6 +15,18 @@
 .docs-text {
   color: $gray-standard-color;
   line-height: 1.7;
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  code {
+    background-color: $gray-light-color;
+    border-radius: 4px;
+    color: $black-standard-color;
+    padding: 2px 4px;
+  }
 }
 
 .info-block__content {
@@ -34,6 +46,24 @@
 
     &:hover {
       color: #f637e3;
+    }
+  }
+}
+
+.code-block {
+  background-color: $black-standard-color;
+  border-radius: 12px;
+  color: $white-color;
+  padding: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 1.5rem 0;
+
+  code.hljs {
+    background: transparent;
+
+    .hljs-comment {
+      font-style: normal;
     }
   }
 }

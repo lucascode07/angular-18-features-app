@@ -15,9 +15,69 @@
     </p>
   </info-block>
 
+  <h2 class="docs-subtitle">Introducción</h2>
+  <p class="docs-text">
+    ZoneJS es una librería que envuelve código JavaScript y lo ejecuta en un
+    contexto específico o zona. En Angular, se crea una nueva zona para cada
+    componente y se rastrean los cambios dentro de esa zona. Cuando se detecta
+    un cambio, se activa la detección de cambios.
+  </p>
+  <p class="docs-text">
+    Angular tiene su propia implementación de zone.js, llamada ngZone, para
+    mejorar el rendimiento y ajustarla al framework. Sin embargo, tenía ciertas
+    desventajas que impactaban en el performance de las aplicaciones. Por lo
+    tanto, en la versión 18 de Angular, se ha incluido una configuración
+    experimental para remover Zone.js y probar los beneficios, como la mejora en
+    el rendimiento y tamaño final de la aplicación.
+  </p>
+
   <br />
 
-  <h2 class="docs-subtitle">Introducción</h2>
+  <info-block boxType="informative" blockTitle="¿Por qué utilizar Zoneless?">
+    <p>
+      Para más detalle sobre Zoneless, puedes visitar la
+      <a
+        href="https://angular.dev/guide/experimental/zoneless#enabling-zoneless-in-an-application"
+      >
+        documentación oficial de Angular.
+      </a>
+    </p>
+  </info-block>
+
   <h2 class="docs-subtitle">Aplicando la configuración</h2>
+  <p class="docs-text">
+    Una vez creado nuestro proyecto de Angular 18, buscamos el archivo
+    <code>app.config.ts</code> y en la lista de providers, agregamos
+    <code>provideExperimentalZonelessChangeDetection()</code>, como en el
+    siguiente ejemplo:
+  </p>
+
+  <pre
+    class="code-block"
+  ><code [highlight]="appConfigCode().APP_CONFIG_CODE" language="typescript"></code></pre>
+
+  <p class="docs-text">
+    Asegúrate de que la función haya sido importada de
+    <code>&commat;angular/core</code>.
+  </p>
+
+  <pre
+    class="code-block"
+  ><code [highlight]="appConfigCode().APP_CONFIG_CODE_IMPORT" language="typescript"></code></pre>
+
   <h2 class="docs-subtitle">Ajustes en angular.json</h2>
+  <p class="docs-text">
+    Ahora vamos a modificar el archivo <code>angular.json</code>. Para la
+    compatibilidad con navegadores antiguos, Angular coloca en la lista de
+    polyfills a zone.js, pero como anteriormente configuramos nuestro proyecto
+    para que sea zoneless, ya no es necesario. Por lo tanto, procederemos a
+    quitarlo en todos los apartados:
+  </p>
+
+  <img src="/assets/images/remove-zonejs.webp" alt="remove-zonejs" />
+
+  <p class="docs-text">
+    Si tenía el proyecto corriendo, se recomienda cancelar el proceso y volverlo
+    a iniciar.
+  </p>
 </section>
